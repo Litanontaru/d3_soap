@@ -11,8 +11,9 @@ import javax.jws.WebService;
  */
 
 @WebService(endpointInterface = "com.epam.soap.PersonInfoService",
-            serviceName = "PersonInfo")
+            serviceName = "personinfo")
 public class PersonInfoServiceImpl implements PersonInfoService {
+    @Override
     public PersonInfoResponse getInfo(PersonInfoRequest request) {
         PersonInfoResponse result = new PersonInfoResponse();
         result.setName(request.getName());
